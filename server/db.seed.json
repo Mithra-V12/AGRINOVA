@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "id": "farmer_demo",
+      "email": "farmer@agrinova.test",
+      "passwordHash": "",
+      "userType": "farmer",
+      "name": "Ramesh Kumar",
+      "phone": "+91 98765 43210",
+      "state": "Tamil Nadu",
+      "district": "Thanjavur",
+      "village": "Thanjavur",
+      "pinCode": "613001",
+      "preferredLanguage": "ta",
+      "landSizeAcres": 4.5,
+      "primaryCrop": "Rice",
+      "cropTypes": ["Rice", "Turmeric", "Black Gram"],
+      "address": "",
+      "registeredAt": "2026-01-15T09:00:00.000Z"
+    },
+    {
+      "id": "customer_demo",
+      "email": "customer@agrinova.test",
+      "passwordHash": "",
+      "userType": "customer",
+      "name": "Priya Sundaram",
+      "phone": "+91 90000 11122",
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "village": "",
+      "pinCode": "600001",
+      "preferredLanguage": "en",
+      "address": "12 Lake View Road, Chennai",
+      "registeredAt": "2026-02-01T09:00:00.000Z"
+    }
+  ],
+  "sessions": {},
+  "soilReports": {
+    "farmer_demo": {
+      "score": 72,
+      "ph": 6.8,
+      "nitrogen": "Medium",
+      "phosphorus": "Low",
+      "potassium": "High",
+      "organicMatter": 1.9,
+      "texture": "Clay loam",
+      "lastUpdated": "2026-06-20T10:30:00.000Z",
+      "summary": "Soil is moderately fertile with good potassium reserves. Phosphorus is low — consider rock phosphate or DAP before the next sowing. Slightly acidic pH is fine for rice but watch it for pulses."
+    }
+  },
+  "marketplace": [
+    {
+      "id": "listing_001",
+      "title": "Fresh Ponni Rice",
+      "crop": "Rice",
+      "quantityKg": 500,
+      "pricePerKg": 42,
+      "location": "Thanjavur, Tamil Nadu",
+      "farmerId": "farmer_demo",
+      "farmerName": "Ramesh Kumar",
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80",
+      "description": "Freshly harvested Ponni rice, sun-dried, stored in jute sacks. Available for bulk purchase.",
+      "organic": false,
+      "rating": 4.7,
+      "createdAt": "2026-06-25T08:00:00.000Z"
+    },
+    {
+      "id": "listing_002",
+      "title": "Organic Turmeric",
+      "crop": "Turmeric",
+      "quantityKg": 120,
+      "pricePerKg": 180,
+      "location": "Erode, Tamil Nadu",
+      "farmerId": "farmer_demo",
+      "farmerName": "Ramesh Kumar",
+      "image": "https://images.unsplash.com/photo-1615485020629-3b0f7d5c4b0d?w=600&q=80",
+      "description": "High-curcumin turmeric, organically grown, polished and dried.",
+      "organic": true,
+      "rating": 4.9,
+      "createdAt": "2026-06-22T11:15:00.000Z"
+    },
+    {
+      "id": "listing_003",
+      "title": "Farm-Fresh Tomatoes",
+      "crop": "Tomato",
+      "quantityKg": 80,
+      "pricePerKg": 32,
+      "location": "Sangareddy, Telangana",
+      "farmerId": "farmer_002",
+      "farmerName": "Lakshmi Devi",
+      "image": "https://images.unsplash.com/photo-1592924357228-91a4daadcfad?w=600&q=80",
+      "description": "Vine-ripened tomatoes, harvested today, no synthetic pesticides used in the final month.",
+      "organic": false,
+      "rating": 4.8,
+      "createdAt": "2026-07-01T07:00:00.000Z"
+    },
+    {
+      "id": "listing_004",
+      "title": "Pesticide-Free Green Gram",
+      "crop": "Green Gram",
+      "quantityKg": 150,
+      "pricePerKg": 145,
+      "location": "Karimnagar, Telangana",
+      "farmerId": "farmer_003",
+      "farmerName": "Anitha Reddy",
+      "image": "https://images.unsplash.com/photo-1515543904379-3d757abe72ea?w=600&q=80",
+      "description": "Pesticide-free green gram, sun-dried and hand-sorted for quality.",
+      "organic": true,
+      "rating": 4.9,
+      "createdAt": "2026-06-28T09:30:00.000Z"
+    }
+  ],
+  "carts": {},
+  "orders": [],
+  "notifications": [],
+  "governmentSchemes": [
+    {
+      "id": "scheme_pmkisan",
+      "name": "PM-KISAN",
+      "description": "Direct income support of ₹6,000/year to eligible farmer families.",
+      "eligibility": { "maxLandSizeAcres": null, "states": null },
+      "link": "https://pmkisan.gov.in",
+      "benefits": "₹6,000/year in 3 installments",
+      "category": "Subsidy",
+      "scope": "Central"
+    },
+    {
+      "id": "scheme_soilhealth",
+      "name": "Soil Health Card Scheme",
+      "description": "Free periodic soil testing and nutrient recommendations.",
+      "eligibility": { "maxLandSizeAcres": null, "states": null },
+      "link": "https://soilhealth.dac.gov.in",
+      "benefits": "Free soil testing every 2 years",
+      "category": "Other",
+      "scope": "Central"
+    },
+    {
+      "id": "scheme_pmfby",
+      "name": "PM Fasal Bima Yojana",
+      "description": "Crop insurance covering yield losses due to natural calamities.",
+      "eligibility": { "maxLandSizeAcres": null, "states": null },
+      "link": "https://pmfby.gov.in",
+      "benefits": "Premium as low as 2% of sum insured for Kharif crops",
+      "category": "Insurance",
+      "scope": "Central"
+    },
+    {
+      "id": "scheme_tn_smallfarmer",
+      "name": "Tamil Nadu Small Farmer Subsidy",
+      "description": "Subsidy on seeds and micro-irrigation for farmers with under 5 acres in Tamil Nadu.",
+      "eligibility": { "maxLandSizeAcres": 5, "states": ["Tamil Nadu"] },
+      "link": "https://www.tn.gov.in/scheme/data_view/6198",
+      "benefits": "Subsidized seeds and micro-irrigation equipment",
+      "category": "Subsidy",
+      "scope": "State"
+    },
+    {
+      "id": "scheme_kcc",
+      "name": "Kisan Credit Card",
+      "description": "Low-interest crop loans with minimal paperwork.",
+      "eligibility": { "maxLandSizeAcres": null, "states": null },
+      "link": "https://www.myscheme.gov.in/schemes/kcc",
+      "benefits": "Crop loans at 4% effective interest (with subvention)",
+      "category": "Loan",
+      "scope": "Central"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+@theme {
+  /* Soil-strata palette */
+  --color-forest: #1b4332;
+  --color-forest-dark: #0f2a1e;
+  --color-canopy: #2d6a4f;
+  --color-canopy-light: #3f8a68;
+  --color-sprout: #74c69d;
+  --color-sprout-light: #b7e4c7;
+  --color-clay: #d4a373;
+  --color-clay-dark: #a97b52;
+  --color-husk: #fefae0;
+  --color-husk-dim: #f5f0d6;
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #4a5a52;
+  --color-alert: #bc4749;
+  --color-amber: #e0a458;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-card: 0.875rem;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-husk);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-color: var(--color-canopy) transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-canopy);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Signature: soil-strata divider — layered gradient standing in for a generic hairline rule */
+.strata-divider {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--color-clay-dark) 0%,
+    var(--color-clay) 22%,
+    var(--color-canopy) 55%,
+    var(--color-sprout) 78%,
+    var(--color-sprout-light) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Score bar built from the same strata language */
+.strata-score-track {
+  height: 12px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--color-husk-dim);
+  overflow: hidden;
+  position: relative;
+}
+.strata-score-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-clay-dark), var(--color-canopy), var(--color-sprout));
+  transition: width 0.6s ease;
+}
+
+.card-surface {
+  background: #ffffff;
+  border: 1px solid rgba(27, 67, 50, 0.08);
+  border-radius: var(--radius-card);
+  box-shadow: 0 1px 2px rgba(15, 42, 30, 0.04), 0 8px 24px -12px rgba(15, 42, 30, 0.12);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono-data {
+  font-family: var(--font-mono);
+}
